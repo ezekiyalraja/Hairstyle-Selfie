@@ -65,8 +65,6 @@ extension NearBySaloonsViewController: UITableViewDelegate, UITableViewDataSourc
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? nearBySaloonsTableViewCell else{
             return UITableViewCell()
         }
-//        cell.saloonName.text = Saloons[indexPath.row].name
-//        cell.saloonName.text = Saloons[indexPath.row].name
         cell.bookButton.tag = indexPath.row
         cell.bookButton.addTarget(self, action: #selector(BookAction(sender:)), for: .touchUpInside)
         return cell
